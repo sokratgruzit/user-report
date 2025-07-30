@@ -3,6 +3,8 @@ import type { ChangeEvent } from 'react';
 import { useAppDispatch } from '../hooks';
 import { fetchUsers } from '../store/usersSlice';
 
+import Svgs from './Svgs';
+
 export default function SearchBar() {
     const [term, setTerm] = useState('');
     const dispatch = useAppDispatch();
@@ -14,12 +16,15 @@ export default function SearchBar() {
     };
 
     return (
-        <input
-            type="text"
-            className="form-control mb-3"
-            placeholder="Поиск по имени..."
-            value={term}
-            onChange={handleChange}
-        />
+        <div>
+            <input
+                type="text"
+                className="form-control rounded-5 px-4 mb-4"
+                style={{ borderColor: "D4DEFE" }}
+                value={term}
+                onChange={handleChange}
+            />
+            <Svgs svgName="search" color="#432EAB" styles={{ width: 24, height: 24 }} />
+        </div>
     );
 }

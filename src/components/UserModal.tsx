@@ -18,17 +18,15 @@ export default function UserModal() {
                 animate={{ opacity: 1, y: 0 }}
                 onClick={(e) => e.stopPropagation()}
             >
-                <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                        <h5 className="modal-title">{user.name}</h5>
-                        <button className="btn-close" onClick={handleClose}></button>
+                <div className="modal-dialog modal-dialog-centered">
+                    <div className="modal-content rounded-4 p-4">
+                        <div className="d-flex justify-content-between align-items-center mb-3">
+                            <h4 className="mb-0 fw-bold">{user.name}</h4>
+                            <button className="btn-close" onClick={handleClose}></button>
                         </div>
-                        <div className="modal-body">
-                        <p>Email: {user.email}</p>
-                        <p>Phone: {user.phone}</p>
-                        <p>Address: {user.address}</p>
-                        </div>
+                        <p className="text-secondary mb-1">Email: {user.email}</p>
+                        <p className="text-secondary mb-1">Телефон: {user.phone}</p>
+                        <p className="text-secondary">Адрес: {user.address}</p>
                     </div>
                 </div>
             </motion.div>
