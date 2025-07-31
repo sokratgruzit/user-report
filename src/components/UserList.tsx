@@ -5,6 +5,9 @@ import type { User } from '../types/User';
 
 import UserCard from './UserCard';
 
+import styles from './UserCard.module.css';
+import loaderStyles from './Loader.module.css';
+
 export default function UserList() {
     const { users, loading } = useAppSelector((state) => state.users);
     const dispatch = useAppDispatch();
@@ -14,11 +17,17 @@ export default function UserList() {
     }, [dispatch]);
 
     return (
-        <div>
-            {loading && <p>Загрузка...</p>}
-            {users.map((user: User) => (
-                <UserCard key={user.id} user={user} />
-            ))}
+        <div className={styles.cardItems}>
+            {loading && (
+                <div className={loaderStyles.loaderOverlay}>
+                    <div className={loaderStyles.loader}></div>
+                </div>
+            )}
+
+            {!loading &&
+                users.map((user: User) => (
+                    <UserCard key={user.id} user={user} />
+                ))}
         </div>
     );
 }

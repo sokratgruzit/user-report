@@ -1,0 +1,34 @@
+.cardItems {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.cardItem {
+    width: calc(100% / 3 - 16px);
+    height: 314px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.contentItem {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+
+@media (max-width: 980px) {
+    .cardItem { 
+        flex: 1 1 calc(50% - 16px); 
+    }
+}
+
+@media (max-width: 768px) {
+    .cardItem { 
+        flex: 1 1 100%; 
+    }
+}

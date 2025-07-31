@@ -1,0 +1,64 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  z-index: 1060;
+  max-width: 500px;
+  width: 90%;
+}
+
+.modalContent {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 0.75rem;
+}
+
+.label {
+  flex: 0 0 150px;
+  font-weight: 500;
+  color: #212529; 
+}
+
+.value {
+  color: #6c757d; 
+  font-size: 0.85rem;
+  flex: 1;
+}
+
+.lastRowLabel {
+    font-weight: 500;
+    color: #212529; 
+}
+
+.lastRowValue {
+  color: #6c757d; 
+  font-size: 0.85rem;
+}
+
+.lastRow {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    margin-top: 24px;
+}

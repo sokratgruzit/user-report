@@ -4,6 +4,9 @@ export interface User {
     email: string;
     phone: string;
     address: string;
+    hire_date: string;
+    position_name: string;
+    department: string;
 }
 
 export interface UsersState {
